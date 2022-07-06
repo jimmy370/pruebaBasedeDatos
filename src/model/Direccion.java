@@ -1,6 +1,7 @@
 package model;
 
 public class Direccion {
+    int idDireccion;
     String nombre_calle;
     int codigo_postal;
     String numero_calle;
@@ -9,11 +10,13 @@ public class Direccion {
     public Direccion() {
     }
 
-    public Direccion(String nombre_calle, int codigo_postal, String numero_calle, String numero_piso) {
+    public Direccion(int idDireccion,String nombre_calle, int codigo_postal, String numero_calle, String numero_piso) {
+        this.idDireccion=idDireccion;
         this.nombre_calle = nombre_calle;
         this.codigo_postal=codigo_postal;
         this.numero_calle=numero_calle;
         this.numero_piso=numero_piso;
+
     }
 
     public String getNombre_calle() {
@@ -51,7 +54,8 @@ public class Direccion {
     @Override
     public String toString() {
         return "Direccion{" +
-                "nombre_calle='" + nombre_calle + '\'' +
+                "idDireccion=" + idDireccion +
+                ", nombre_calle='" + nombre_calle + '\'' +
                 ", codigo_postal=" + codigo_postal +
                 ", numero_calle='" + numero_calle + '\'' +
                 ", numero_piso='" + numero_piso + '\'' +

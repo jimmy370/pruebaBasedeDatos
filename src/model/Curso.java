@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDate;
 
 public class Curso {
+    int idCurso;
     String nombre;
     LocalDate fecha_inicio;
     LocalDate fecha_salida;
@@ -10,10 +11,19 @@ public class Curso {
     public Curso() {
     }
 
-    public Curso(String nombre, LocalDate fecha_inicio, LocalDate fecha_salida) {
+    public Curso(int idCurso,String nombre, LocalDate fecha_inicio, LocalDate fecha_salida) {
+        this.idCurso=idCurso;
         this.nombre=nombre;
         this.fecha_inicio = fecha_inicio;
         this.fecha_salida=fecha_salida;
+    }
+
+    public int getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(int idCurso) {
+        this.idCurso = idCurso;
     }
 
     public String getNombre() {
@@ -43,7 +53,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "nombre='" + nombre + '\'' +
+                "idCurso=" + idCurso +
+                ", nombre='" + nombre + '\'' +
                 ", fecha_inicio=" + fecha_inicio +
                 ", fecha_salida=" + fecha_salida +
                 '}';

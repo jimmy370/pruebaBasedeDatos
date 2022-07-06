@@ -1,6 +1,7 @@
 package model;
 
 public class Alumno {
+    int idAlumno;
     String nombre ;
     String apellido ;
     int edad;
@@ -8,10 +9,19 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(String nombre, String apellido, int edad) {
+    public Alumno(int idAlumno,String nombre, String apellido, int edad) {
+        this.idAlumno= idAlumno;
         this.nombre = nombre;
         this.apellido=apellido;
         this.edad=edad;
+    }
+
+    public int getIdAlumno() {
+        return idAlumno;
+    }
+
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
     }
 
     public String getNombre(){
@@ -40,7 +50,8 @@ public class Alumno {
     @Override
     public String toString() {
         return "Alumno{" +
-                "nombre='" + nombre + '\'' +
+                "idAlumno=" + idAlumno +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 '}';

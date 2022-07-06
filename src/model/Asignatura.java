@@ -1,15 +1,25 @@
 package model;
 
 public class Asignatura {
+    int idAsignaturas;
 String nombre;
 int creditos;
 
     public Asignatura() {
     }
 
-    public Asignatura(String nombre, int creditos) {
+    public Asignatura(int idAsignaturas,String nombre, int creditos) {
+        this.idAsignaturas=idAsignaturas;
         this.nombre = nombre;
         this.creditos=creditos;
+    }
+
+    public int getIdAsignaturas() {
+        return idAsignaturas;
+    }
+
+    public void setIdAsignaturas(int idAsignaturas) {
+        this.idAsignaturas = idAsignaturas;
     }
 
     public String getNombre() {
@@ -31,7 +41,8 @@ int creditos;
     @Override
     public String toString() {
         return "Asignatura{" +
-                "nombre='" + nombre + '\'' +
+                "idAsignaturas=" + idAsignaturas +
+                ", nombre='" + nombre + '\'' +
                 ", creditos=" + creditos +
                 '}';
     }
